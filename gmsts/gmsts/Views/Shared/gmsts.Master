@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <link href="~Content/css/sts.css" rel="stylesheet" type="text/css" />
+
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    
+    <!--Google Analytics-->
+	<script type="text/javascript">
+	    var _gaq = _gaq || [];
+	    _gaq.push(['_setAccount', 'UA-28700169-1']);
+	    _gaq.push(['_trackPageview']);
+
+	    (function () {
+	        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	    })();
+	</script>
+</head>
+<body>
+    <div id="container">
+        <div id ="header" class="header">
+            <a href="http://gmsts.org">
+            <img src="~/Content/Images/Logo.gif" alt="STS logo" width="500" height="152" border="0" align="top" />
+            </a>
+        </div>    
+            
+        <div id="menu" class="menu">
+            <ul>
+                <li><a href="http://gmsts.org/about.html">About Us</a></li>
+                <li><a href="http://gmsts.org/foundation.html">Foundation</a>
+                    <ul>
+                        <li><a href="http://gmsts.org/board.html">Board Members</a></li> 
+                        <li><a href="http://gmsts.org/freports.html">Reports</a></li>
+                        <li><a href="http://gmsts.org/grants.html">Grants</a></li>
+                        <li><a href="http://gmsts.org/admin.html">Administrative</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://gmsts.org/operations.html">Operations</a>
+                    <ul>
+                        <li><a href="http://gmsts.org/documents.html">Project Documents</a></li> 
+                        <li><a href="http://gmsts.org/atlas.html">Atlas Software</a></li> 
+                        <li><a href="http://yt.ento.vt.edu/gadget_bidunit/">Gadget Utilities</a></li>
+                        <li><a href="http://yt.ento.vt.edu/database_reports/">Database Reports</a></li>  
+                        <li><a href="http://yt.ento.vt.edu/error_correction/">Error Correction</a></li> 
+                        <li><a href="http://gmsts.org/howto.html">Instructional Guides</a></li>  
+                        <li><a href="http://gmsts.org/library.html">Map Library</a></li>  
+                        <li><a href="http://globe.asets.msu.edu/sts_mapserver/">Map Server</a></li>  
+                        <li><a href="http://gmsts.org/treatments.html">Treatments</a></li>  
+                        <li><a href="http://fubyss.ento.vt.edu/FTP">FTP</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://gmsts.org/regulatory.html">Regulatory</a></li>
+                <li><a href="http://da.ento.vt.edu">Decision Support</a>
+                    <ul>
+                        <li><a href="http://old-da.ento.vt.edu">Old DA Page</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://yt.ento.vt.edu/directory/">Directory</a></li>
+                <li><a href="http://gmsts.org/pubs.html">Publications</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <asp:ContentPlaceHolder ID="LeftContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+
+            <asp:ContentPlaceHolder ID="RightContent" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+</body>
+</html>
